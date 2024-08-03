@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "geist";
+    src: url(./fonts/GeistVariableVF.ttf);
+}
+@font-face {
+    font-family: "gothic";
+    src: url(./fonts/OldLondon.ttf);
+}
+@font-face {
+    font-family: "merriweather";
+    src: url(./fonts/Merriweather-Regular.ttf);
+}
+
+
+
+*{
+    margin: 0px;
+}
+body{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#navbar{
+    background-color: #eeeeee;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+}
+#mainbody{
+    width: 100vw;
+    height: calc(100vh - 70px);
+    max-width: 1400px;
+}
+#lftnvbrsd,#rgtnvbrsd{
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+#mainwebttlflb{
+    width: fit-content;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: merriweather;
+    font-size: 24px;
+    min-width: 100px;
+}
+#lftsdmnnvbr,#rgtsdmnnvbr{
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+#middlebtnsmn{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#middlebtnsmn div{
+    margin-left: 25px;
+    margin-right: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: geist;
+    font-weight: 700;
+    user-select: none;
+    font-size: 15px;
+}
+#middlebtnsmn {
+    display: flex;
+    justify-content: space-around;
+}
+
+#middlebtnsmn div {
+    position: relative;
+    /* padding-bottom: 10px; */
+    cursor: pointer;
+    color: black;
+}
+
+#middlebtnsmn div::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: black;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+    color: black;
+}
+#middlebtnsmn div:hover {
+    color: black;  /* Text color on hover */
+}
+
+#middlebtnsmn div:hover::after {
+    width: 100%;
+}
+
+#middlebtnsmn:hover div {
+    color: rgb(150, 150, 150);  /* Change all to gray on hover */
+}
+
+#middlebtnsmn div:hover {
+    color: black;  /* Override hovered element to black */
+}
+#rgtsdmnnvbr{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+#rgtsdmnnvbr div{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
