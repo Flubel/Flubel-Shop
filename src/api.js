@@ -1,14 +1,13 @@
 const express = require("express")
 const serverless = require("serverless-http")
+const path = require('path');
 
 
 const app = express()
 const router = express.Router()
 
 router.get('/',(req,res)=>{
-    res.json({
-        "hello": "hi"
-    })
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 })
 
 
